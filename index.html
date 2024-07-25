@@ -10,7 +10,65 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.contact-form {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				max-width: 600px;
+				margin: 0 auto;
+			}
+			.form-group-container {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+			}
+			.form-group {
+				margin-bottom: 1em;
+				width: 100%;
+			}
+			.form-group.half {
+				width: 48%;
+				margin-right: 2%;
+			}
+			.form-group.half:nth-child(2n) {
+				margin-right: 0;
+			}
+			.form-label {
+				display: block;
+				margin-bottom: 0.5em;
+				font-weight: bold;
+			}
+			.form-input, .form-textarea {
+				width: 100%;
+				padding: 0.5em;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+			}
+			.form-input {
+				font-size: 0.9em;
+			}
+			.form-textarea {
+				font-size: 0.9em;
+				resize: vertical;
+			}
+			.form-submit {
+				padding: 0.7em 1.5em;
+				font-size: 1em;
+				border: none;
+				border-radius: 5px;
+				background-color: #007BFF;
+				color: #fff;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+			.form-submit:hover {
+				background-color: #0056b3;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -33,7 +91,7 @@
 				<section class="spotlight style2 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h2>Where to Begin</h2>
-						<p>Currently as a third-year student ast St. John's University, I am focusing on how to improve my skills and making my own spotlight in the technological world. I have great interest in being either a data analyist or software enginner, therefore my projects may be diverse and spreadout.</p>
+						<p>Currently as a third-year student ast St. John's University, I am focusing on how to improve my skills and making my own spotlight in the technological world. I have great interest in being either a data analyist or software enginner with a focus in AI, therefore my projects may be diverse and spreadout.</p>
 					</div>
 					<div class="image">
 						<img src="images/IMG_1712.jpeg" alt="" />
@@ -193,27 +251,30 @@
 				<!-- Seven -->
 					<section class="wrapper style1 align-center">
 						<div class="inner medium">
-							<h2>Get in touch</h2>
-							<form method="post" action="mail.php">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
+							<h2><strong>Get in Touch</strong></h2>
+    							<p class="contact-description">Fill out the form below and I'll get back to you as soon as possible.</p>
+  							<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+								<input type="hidden" name="access_key" value="6e2a09d4-c4f4-4542-85ef-fca8492a91d6" />
+								<input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+								<input type="hidden" name="from_name" value="My Website" />
+								<div class="form-group-container">
+									<div class="form-group half">
+										<label for="name" class="form-label">Name</label>
+										<input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
 									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
+									<div class="form-group half">
+										<label for="email" class="form-label">Email</label>
+										<input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
 									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
+								<div class="form-group">
+										<label for="message" class="form-label">Message</label>
+										<textarea class="form-textarea" id="message" name="message" rows="6" placeholder="Your message"></textarea>
 									</div>
 								</div>
 								<ul class="actions special">
 									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
 								</ul>
 							</form>
-
 						</div>
 					</section>
 				
@@ -225,8 +286,8 @@
 								<li><a href="https://x.com/loxina22" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
 								<!-- <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>  -->
 								<li><a href="https://www.instagram.com/loxina.v/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="malito:lorena.vazquezjimenez@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-								<li><a href="https://github.com/loxina22" class="icon style2 fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:lorena.vazquezjimenez@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://github.com/loxina22" class="icon style2 fa brands fa-github"><span class="label">Github</span></a></li>							
 							</ul>
 							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
